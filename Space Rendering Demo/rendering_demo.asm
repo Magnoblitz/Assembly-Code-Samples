@@ -229,21 +229,6 @@ segment .data
         ps_fIncUpdate    dd 0             ; 4 bytes
         ps_rgbReserved   times 32 db 0    ; 32 bytes
 
-    ostrich_image:
-        istruc image_data 
-            at filename, db "images/ostrich.png"
-        iend
-
-    duck_image:
-        istruc image_data
-            at filename, db "images/duck.png"
-        iend
-
-    flying_tern_image:
-        istruc image_data
-            at filename, db "images/flying_tern.png"
-        iend
-
     flamingo_image:
         istruc image_data
             at filename, db "images/flamingo.png"
@@ -272,15 +257,6 @@ segment .text
 
 main:
     ; load the image data
-    lea rcx, ostrich_image
-    call load_image_data
-
-    lea rcx, duck_image
-    call load_image_data
-
-    lea rcx, flying_tern_image
-    call load_image_data
-
     lea rcx, flamingo_image
     call load_image_data
 
