@@ -1,4 +1,4 @@
-; nasm -f win64 -o rendering_demo.o rendering_demo.asm && gcc -o rendering_demo.exe rendering_demo.o image_funcs.o -luser32 -lkernel32 -lgdi32 && rendering_demo.exe
+; nasm -f win64 -o rendering_demo.o rendering_demo.asm && gcc -o rendering_demo.exe rendering_demo.o image_funcs.o -luser32 -lkernel32 -lgdi32 -mwindows && rendering_demo.exe
 
 
 
